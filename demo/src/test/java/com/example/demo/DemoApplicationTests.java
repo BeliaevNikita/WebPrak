@@ -1,10 +1,9 @@
 package com.example.demo;
 
 import org.junit.jupiter.api.Test;
-import org.springframework.boot.test.context.SpringBootTest;
+import ru.msu.cmc.webprak.dao.AbstractDaoIntegrationTest;
 
-@SpringBootTest
-class DemoApplicationTests {
+class DemoApplicationTests extends AbstractDaoIntegrationTest {
 
 	@Test
 	void contextLoads() {

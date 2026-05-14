@@ -11,6 +11,12 @@ public interface BaseDao<T extends BaseEntity<ID>, ID> {
 
     List<T> getAll();
 
+    List<T> getAll(int offset, int limit);
+
+    long count();
+
+    boolean existsById(ID id);
+
     T save(T entity);
 
     T update(T entity);

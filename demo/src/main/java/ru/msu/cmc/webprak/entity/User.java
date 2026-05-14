@@ -1,6 +1,8 @@
 package ru.msu.cmc.webprak.entity;
 
 import lombok.*;
+import org.hibernate.annotations.JdbcTypeCode;
+import org.hibernate.type.SqlTypes;
 import ru.msu.cmc.webprak.common.BaseEntity;
 import ru.msu.cmc.webprak.enums.UserRole;
 
@@ -26,6 +28,7 @@ public class User implements BaseEntity<Integer> {
     @Enumerated(EnumType.STRING)
     private UserRole role;
 
+    @JdbcTypeCode(SqlTypes.JSON)
     @Column(columnDefinition = "json")
     private String contacts;
 

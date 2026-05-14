@@ -42,6 +42,37 @@ public abstract class BaseDaoImpl<T extends BaseEntity<ID>, ID> implements BaseD
     }
 
     @Override
+    @Transactional(readOnly = true)
+    public List<T> getAll(int offset, int limit) {
+        CriteriaBuilder criteriaBuilder = entityManager.getCriteriaBuilder();
+        CriteriaQuery<T> criteriaQuery = criteriaBuilder.createQuery(entityClass);
+        Root<T> root = criteriaQuery.from(entityClass);
+
+        criteriaQuery.select(root);
+        return entityManager.createQuery(criteriaQuery)
+                .setFirstResult(offset)
+                .setMaxResults(limit)
+                .getResultList();
+    }
+
+    @Override
+    @Transactional(readOnly = true)
+    public long count() {
+        CriteriaBuilder criteriaBuilder = entityManager.getCriteriaBuilder();
+        CriteriaQuery<Long> criteriaQuery = criteriaBuilder.createQuery(Long.class);
+        Root<T> root = criteriaQuery.from(entityClass);
+
+        criteriaQuery.select(criteriaBuilder.count(root));
+        return entityManager.createQuery(criteriaQuery).getSingleResult();
+    }
+
+    @Override
+    @Transactional(readOnly = true)
+    public boolean existsById(ID id) {
+        return getById(id).isPresent();
+    }
+
+    @Override
     public T save(T entity) {
         entityManager.persist(entity);
         return entity;
