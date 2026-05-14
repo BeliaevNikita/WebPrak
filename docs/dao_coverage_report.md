@@ -68,4 +68,4 @@
 
 ## Скриншот покрытия
 
-![DAO Coverage](docs/dao_coverage_report.png)
+![DAO Coverage](dao_coverage_report.png)
