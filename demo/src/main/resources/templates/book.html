@@ -1,0 +1,31 @@
+﻿<!DOCTYPE html>
+<html lang="ru" xmlns:th="http://www.thymeleaf.org" th:replace="~{base :: layout('Книга', ~{::main})}">
+<main class="flex-grow-1 py-4">
+    <section class="container">
+        <div class="row g-4">
+            <div class="col-md-4">
+                <div class="bg-light border rounded ratio ratio-3x4"></div>
+            </div>
+            <div class="col-md-8">
+                <h1 th:text="${book.work.title}">Название книги</h1>
+                <p class="text-muted" th:text="${book.publisher}">Издательство</p>
+                <dl class="row">
+                    <dt class="col-sm-4">Язык</dt>
+                    <dd class="col-sm-8" th:text="${book.language}">RU</dd>
+                    <dt class="col-sm-4">Дата издания</dt>
+                    <dd class="col-sm-8" th:text="${book.publicationDate}">2024-01-01</dd>
+                    <dt class="col-sm-4">Цена</dt>
+                    <dd class="col-sm-8 fw-semibold" th:text="${book.price}">0.00</dd>
+                    <dt class="col-sm-4">На складе</dt>
+                    <dd class="col-sm-8" th:text="${book.quantity}">0</dd>
+                </dl>
+                <form th:action="@{/cart/items}" method="post" class="d-flex gap-2">
+                    <input type="hidden" name="editionId" th:value="${book.id}">
+                    <input class="form-control" type="number" name="quantity" min="1" value="1" style="max-width: 120px;">
+                    <button class="btn btn-primary" type="submit">Добавить в корзину</button>
+                </form>
+            </div>
+        </div>
+    </section>
+</main>
+</html>

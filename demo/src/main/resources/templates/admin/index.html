@@ -1,0 +1,26 @@
+﻿<!DOCTYPE html>
+<html lang="ru" xmlns:th="http://www.thymeleaf.org" th:replace="~{base :: layout('Панель управления', ~{::main})}">
+<main class="flex-grow-1 py-4">
+    <section class="container">
+        <h1 class="h2 mb-4">Панель управления</h1>
+        <div class="row g-3">
+            <div class="col-md-6">
+                <a class="card text-decoration-none h-100" th:href="@{/admin/books}">
+                    <div class="card-body">
+                        <h2 class="h5">Книги</h2>
+                        <p class="text-muted mb-0">Управление каталогом и складскими остатками.</p>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-6">
+                <a class="card text-decoration-none h-100" th:href="@{/admin/orders}">
+                    <div class="card-body">
+                        <h2 class="h5">Заказы</h2>
+                        <p class="text-muted mb-0">Фильтрация заказов и изменение статусов.</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+</main>
+</html>

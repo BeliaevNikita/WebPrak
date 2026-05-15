@@ -1,0 +1,84 @@
+﻿<!DOCTYPE html>
+<html lang="ru" xmlns:th="http://www.thymeleaf.org" th:replace="~{base :: layout('Управление заказами', ~{::main})}">
+<main class="flex-grow-1 py-4">
+    <section class="container">
+        <div class="mb-4">
+            <h1 class="h2 mb-1">Заказы</h1>
+            <p class="text-muted mb-0">Фильтрация заказов и изменение статусов.</p>
+        </div>
+
+        <form class="row g-3 border rounded p-3 bg-light mb-4" th:action="@{/admin/orders}" method="get">
+            <div class="col-md-4">
+                <label class="form-label" for="status">Статус</label>
+                <select id="status" class="form-select" name="status">
+                    <option value="">Все статусы</option>
+                    <option value="DRAFT">DRAFT</option>
+                    <option value="IN_PROCESSING">IN_PROCESSING</option>
+                    <option value="DELIVERED">DELIVERED</option>
+                    <option value="REFUND_ATTEMPT">REFUND_ATTEMPT</option>
+                    <option value="REFUND_ACCEPTED">REFUND_ACCEPTED</option>
+                    <option value="PARTIAL_REFUND">PARTIAL_REFUND</option>
+                </select>
+            </div>
+            <div class="col-md-5">
+                <label class="form-label" for="client">Клиент</label>
+                <input id="client" class="form-control" type="text" name="client"
+                       placeholder="ID, логин, имя или фамилия" th:value="${param.client}">
+            </div>
+            <div class="col-md-3 d-flex align-items-end">
+                <button class="btn btn-outline-primary w-100" type="submit">Фильтровать</button>
+            </div>
+        </form>
+
+        <div class="table-responsive">
+            <table class="table table-hover align-middle">
+                <thead class="table-light">
+                <tr>
+                    <th>ID</th>
+                    <th>Клиент</th>
+                    <th>Дата</th>
+                    <th>Адрес доставки</th>
+                    <th>Текущий статус</th>
+                    <th>Изменить статус</th>
+                    <th></th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr th:each="order : ${orders}">
+                    <td th:text="${order.id}">1</td>
+                    <td>
+                        <div th:text="${order.client.login}">client</div>
+                        <small class="text-muted"
+                               th:text="${order.client.firstName + ' ' + order.client.lastName}">Имя Фамилия</small>
+                    </td>
+                    <td th:text="${order.orderDate}">2024-01-01</td>
+                    <td th:text="${order.deliveryAddress}">Москва</td>
+                    <td th:text="${order.status}">DRAFT</td>
+                    <td>
+                        <form class="d-flex gap-2" th:action="@{/admin/orders/{id}/status(id=${order.id})}" method="post">
+                            <select class="form-select form-select-sm" name="status" aria-label="Новый статус">
+                                <option value="DRAFT">DRAFT</option>
+                                <option value="IN_PROCESSING">IN_PROCESSING</option>
+                                <option value="DELIVERED">DELIVERED</option>
+                                <option value="REFUND_ATTEMPT">REFUND_ATTEMPT</option>
+                                <option value="REFUND_ACCEPTED">REFUND_ACCEPTED</option>
+                                <option value="PARTIAL_REFUND">PARTIAL_REFUND</option>
+                            </select>
+                            <button class="btn btn-sm btn-outline-primary" type="submit">Изменить статус</button>
+                        </form>
+                    </td>
+                    <td class="text-end">
+                        <a class="btn btn-sm btn-outline-secondary"
+                           th:href="@{/orders/{id}(id=${order.id})}">Открыть</a>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="alert alert-secondary" th:if="${orders == null || orders.isEmpty()}">
+            Заказы не найдены.
+        </div>
+    </section>
+</main>
+</html>

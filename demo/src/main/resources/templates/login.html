@@ -1,0 +1,15 @@
+﻿<!DOCTYPE html>
+<html lang="ru" xmlns:th="http://www.thymeleaf.org" th:replace="~{base :: layout('Вход', ~{::main})}">
+<main class="flex-grow-1 py-4">
+    <section class="container" style="max-width: 520px;">
+        <h1 class="h2 mb-4">Вход</h1>
+        <form th:action="@{/login}" method="post" class="border rounded p-4">
+            <label class="form-label" for="login">Логин</label>
+            <input id="login" class="form-control mb-3" type="text" name="login" required>
+            <label class="form-label" for="password">Пароль</label>
+            <input id="password" class="form-control mb-4" type="password" name="password" required>
+            <button class="btn btn-primary w-100" type="submit">Войти</button>
+        </form>
+    </section>
+</main>
+</html>

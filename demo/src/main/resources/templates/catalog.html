@@ -1,0 +1,82 @@
+﻿<!DOCTYPE html>
+<html lang="ru" xmlns:th="http://www.thymeleaf.org" th:replace="~{base :: layout('Каталог', ~{::main})}">
+<main class="flex-grow-1 py-4">
+    <section class="container">
+        <div class="d-flex flex-column flex-lg-row justify-content-between align-items-lg-end gap-3 mb-4">
+            <div>
+                <h1 class="h2 mb-1">Каталог книг</h1>
+                <p class="text-muted mb-0">Выберите книгу и перейдите на страницу с подробным описанием.</p>
+            </div>
+            <form class="d-flex gap-2" th:action="@{/catalog}" method="get">
+                <input class="form-control" type="search" name="title" placeholder="Поиск по названию"
+                       th:value="${param.title}">
+                <button class="btn btn-primary" type="submit">Найти</button>
+            </form>
+        </div>
+
+        <div class="row g-4">
+            <aside class="col-lg-3">
+                <form class="border rounded p-3 bg-light" th:action="@{/catalog}" method="get">
+                    <h2 class="h5 mb-3">Фильтры</h2>
+
+                    <div class="mb-3">
+                        <label class="form-label" for="author">Автор</label>
+                        <input id="author" class="form-control" type="text" name="author"
+                               placeholder="Фамилия или имя" th:value="${param.author}">
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label" for="genre">Жанр</label>
+                        <input id="genre" class="form-control" type="text" name="genre"
+                               placeholder="Жанр" th:value="${param.genre}">
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label" for="minPrice">Цена от</label>
+                        <input id="minPrice" class="form-control" type="number" min="0" step="0.01"
+                               name="minPrice" th:value="${param.minPrice}">
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label" for="maxPrice">Цена до</label>
+                        <input id="maxPrice" class="form-control" type="number" min="0" step="0.01"
+                               name="maxPrice" th:value="${param.maxPrice}">
+                    </div>
+
+                    <button class="btn btn-outline-primary w-100" type="submit">Применить</button>
+                </form>
+            </aside>
+
+            <div class="col-lg-9">
+                <div class="row row-cols-1 row-cols-md-2 row-cols-xl-3 g-3">
+                    <div class="col" th:each="book : ${books}">
+                        <article class="card h-100 shadow-sm">
+                            <div class="card-body d-flex flex-column">
+                                <h2 class="h5 card-title" th:text="${book.work.title}">Название книги</h2>
+                                <p class="card-text text-muted mb-2">
+                                    <span th:text="${book.work.authors != null && !book.work.authors.isEmpty() ? book.work.authors.get(0).firstName + ' ' + book.work.authors.get(0).lastName : 'Автор не указан'}">Автор</span>
+                                </p>
+                                <dl class="row small mb-3">
+                                    <dt class="col-5">Цена</dt>
+                                    <dd class="col-7 fw-semibold mb-1" th:text="${book.price}">0.00</dd>
+
+                                    <dt class="col-5">Издательство</dt>
+                                    <dd class="col-7 mb-1" th:text="${book.publisher}">Издательство</dd>
+
+                                    <dt class="col-5">Язык</dt>
+                                    <dd class="col-7 mb-1" th:text="${book.language}">RU</dd>
+                                </dl>
+                                <a class="btn btn-primary mt-auto" th:href="@{/book/{id}(id=${book.id})}">Подробнее</a>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+
+                <div class="alert alert-secondary mt-4" th:if="${books == null || books.isEmpty()}">
+                    Книги не найдены.
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+</html>

@@ -1,0 +1,12 @@
+﻿<!DOCTYPE html>
+<html lang="ru" xmlns:th="http://www.thymeleaf.org" th:replace="~{base :: layout('Главная', ~{::main})}">
+<main class="flex-grow-1 py-4">
+    <section class="container">
+        <div class="p-4 p-md-5 bg-light border rounded-3">
+            <h1 class="display-6 fw-semibold">Интернет-магазин книг</h1>
+            <p class="lead mb-4">Выбирайте издания, добавляйте книги в корзину и отслеживайте заказы в личном кабинете.</p>
+            <a class="btn btn-primary btn-lg" th:href="@{/catalog}">Перейти в каталог</a>
+        </div>
+    </section>
+</main>
+</html>
