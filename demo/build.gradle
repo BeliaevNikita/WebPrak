@@ -34,7 +34,8 @@ dependencies {
 	testImplementation 'org.springframework.boot:spring-boot-starter-thymeleaf-test'
 	testImplementation 'org.springframework.boot:spring-boot-starter-webmvc-test'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
-	testImplementation 'org.seleniumhq.selenium:selenium-java:4.27.0'
+	testImplementation 'org.seleniumhq.selenium:selenium-java:4.43.0'
+	testImplementation 'org.seleniumhq.selenium:selenium-devtools-v147:4.43.0'
 	testImplementation 'org.testcontainers:junit-jupiter:1.21.3'
 	testImplementation 'org.testcontainers:postgresql:1.21.3'
 	testCompileOnly 'org.projectlombok:lombok'
@@ -44,6 +45,42 @@ dependencies {
 
 tasks.named('test') {
 	useJUnitPlatform()
+	def testLogFile = layout.buildDirectory.file('test-results/test/all-tests.log')
+	def appendToTestLog = { String message ->
+		def file = testLogFile.get().asFile
+		file.parentFile.mkdirs()
+		file.append(message + System.lineSeparator(), 'UTF-8')
+	}
+
+	doFirst {
+		def file = testLogFile.get().asFile
+		file.parentFile.mkdirs()
+		file.text = ''
+		appendToTestLog("Test run started: ${new Date()}")
+	}
+
+	beforeTest { descriptor ->
+		appendToTestLog("START ${descriptor.className}.${descriptor.name}")
+	}
+
+	afterTest { descriptor, result ->
+		appendToTestLog("END ${descriptor.className}.${descriptor.name} -> ${result.resultType} (${result.endTime - result.startTime} ms)")
+		if (result.exception != null) {
+			appendToTestLog(result.exception.toString())
+			result.exception.stackTrace.each { appendToTestLog("\tat ${it}") }
+		}
+	}
+
+	onOutput { descriptor, event ->
+		appendToTestLog("${event.destination} ${descriptor.className}.${descriptor.name}: ${event.message.trim()}")
+	}
+
+	afterSuite { descriptor, result ->
+		if (descriptor.parent == null) {
+			appendToTestLog("Test run finished: ${new Date()}")
+			appendToTestLog("Result: ${result.resultType}; tests: ${result.testCount}, succeeded: ${result.successfulTestCount}, failed: ${result.failedTestCount}, skipped: ${result.skippedTestCount}")
+		}
+	}
 	finalizedBy tasks.named('jacocoTestReport')
 }
 
