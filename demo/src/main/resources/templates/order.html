@@ -1,0 +1,83 @@
+﻿<!DOCTYPE html>
+<html lang="ru" xmlns:th="http://www.thymeleaf.org" th:replace="~{base :: layout('Заказ', ~{::main})}">
+<main class="flex-grow-1 py-4">
+    <section class="container">
+        <div class="d-flex flex-column flex-md-row justify-content-between align-items-md-start gap-3 mb-4">
+            <div>
+                <h1 class="h2 mb-1">Заказ <span th:text="${order.id}">1</span></h1>
+                <p class="text-muted mb-0">
+                    Статус заказа:
+                    <span class="fw-semibold" th:text="${order.status}">DRAFT</span>
+                </p>
+            </div>
+        </div>
+
+        <form th:action="${isEmployee} ? @{/admin/orders/{id}/refund(id=${order.id})} : @{/orders/{id}/checkout(id=${order.id})}" method="post">
+            <div class="table-responsive">
+                <table class="table table-hover align-middle">
+                    <thead class="table-light">
+                    <tr>
+                        <th scope="col"></th>
+                        <th scope="col">Название книги</th>
+                        <th scope="col">Автор</th>
+                        <th scope="col">Цена</th>
+                        <th scope="col">Количество</th>
+                        <th scope="col">Статус позиции</th>
+                        <th scope="col"></th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr th:each="item : ${items}">
+                        <td>
+                            <input class="form-check-input" type="checkbox" name="itemIds"
+                                   th:value="${item.id}"
+                                   th:if="${isEmployee && (order.status.name() == 'REFUND_ATTEMPT' || order.status.name() == 'DELIVERED')}"
+                                   th:disabled="${item.status == null || item.status.name() != 'DELIVERED'}">
+                        </td>
+                        <td th:text="${item.edition.work.title}">Название книги</td>
+                        <td th:text="${item.edition.work.authors != null && !item.edition.work.authors.isEmpty() ? item.edition.work.authors.get(0).firstName + ' ' + item.edition.work.authors.get(0).lastName : 'Автор не указан'}">
+                            Автор
+                        </td>
+                        <td th:text="${item.edition.price}">0.00</td>
+                        <td th:text="${item.quantity}">1</td>
+                        <td th:text="${item.status != null ? item.status : '-'}">-</td>
+                        <td class="text-end">
+                            <a class="btn btn-sm btn-outline-primary"
+                               th:href="@{/book/{id}(id=${item.edition.id})}">Подробнее</a>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="alert alert-secondary" th:if="${items == null || items.isEmpty()}">
+                В заказе пока нет позиций.
+            </div>
+
+            <div class="d-flex flex-column flex-md-row justify-content-between align-items-md-center gap-3 mt-4">
+                <div class="fs-5">
+                    Итоговая стоимость:
+                    <span class="fw-semibold" th:text="${total}">0.00</span>
+                </div>
+
+                <div class="d-flex flex-column flex-sm-row gap-2" th:if="${!isEmployee && order.status.name() == 'DRAFT'}">
+                    <input class="form-control" type="text" name="deliveryAddress"
+                           placeholder="Адрес доставки" required style="min-width: 260px;"
+                           th:value="${order.deliveryAddress}">
+                    <button class="btn btn-primary" type="submit"
+                            style="white-space: nowrap;">Оформить заказ</button>
+                </div>
+
+                <div class="d-flex gap-2" th:if="${isEmployee && (order.status.name() == 'REFUND_ATTEMPT' || order.status.name() == 'DELIVERED')}">
+                    <button class="btn btn-warning" type="submit">Подтвердить возврат</button>
+                </div>
+            </div>
+        </form>
+
+        <form class="mt-3" th:action="@{/orders/{id}/refund(id=${order.id})}" method="post"
+              th:if="${order.status.name() == 'DELIVERED'}">
+            <button class="btn btn-warning" type="submit">Оформить возврат</button>
+        </form>
+    </section>
+</main>
+</html>

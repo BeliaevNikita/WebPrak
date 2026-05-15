@@ -133,7 +133,7 @@ public class OrderItemDaoImpl extends BaseDaoImpl<OrderItem, Integer> implements
         item.setOrder(cart);
         item.setEdition(edition);
         item.setQuantity(quantity);
-        item.setStatus(ItemStatus.DELIVERED);
+        item.setStatus(null);
         return save(item);
     }
 

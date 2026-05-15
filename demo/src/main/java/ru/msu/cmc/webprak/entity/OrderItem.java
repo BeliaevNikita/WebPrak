@@ -1,6 +1,8 @@
 package ru.msu.cmc.webprak.entity;
 
 import lombok.*;
+import org.hibernate.annotations.JdbcTypeCode;
+import org.hibernate.type.SqlTypes;
 import ru.msu.cmc.webprak.common.BaseEntity;
 import ru.msu.cmc.webprak.enums.ItemStatus;
 
@@ -33,5 +35,6 @@ public class OrderItem implements BaseEntity<Integer> {
     private Integer quantity;
 
     @Enumerated(EnumType.STRING)
+    @JdbcTypeCode(SqlTypes.NAMED_ENUM)
     private ItemStatus status;
 }

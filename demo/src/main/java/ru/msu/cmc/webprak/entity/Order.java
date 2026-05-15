@@ -4,6 +4,8 @@ import ru.msu.cmc.webprak.common.BaseEntity;
 import ru.msu.cmc.webprak.enums.OrderStatus;
 
 import lombok.*;
+import org.hibernate.annotations.JdbcTypeCode;
+import org.hibernate.type.SqlTypes;
 
 import jakarta.persistence.*;
 import java.time.LocalDate;
@@ -33,6 +35,7 @@ public class Order implements BaseEntity<Integer> {
     private LocalDate orderDate;
 
     @Enumerated(EnumType.STRING)
+    @JdbcTypeCode(SqlTypes.NAMED_ENUM)
     private OrderStatus status;
 
     @Column(name = "delivery_address")

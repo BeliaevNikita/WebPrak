@@ -26,6 +26,7 @@ public class User implements BaseEntity<Integer> {
     private Integer id;
 
     @Enumerated(EnumType.STRING)
+    @JdbcTypeCode(SqlTypes.NAMED_ENUM)
     private UserRole role;
 
     @JdbcTypeCode(SqlTypes.JSON)

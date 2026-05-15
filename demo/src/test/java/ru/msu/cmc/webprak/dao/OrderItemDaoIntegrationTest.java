@@ -69,9 +69,12 @@ class OrderItemDaoIntegrationTest extends AbstractDaoIntegrationTest {
 
         assertThat(orderItemDao.findByOrderAndEdition(cart, edition)).isPresent();
         assertThat(orderItemDao.existsByOrderAndEdition(cart, edition)).isTrue();
-        assertThat(orderItemDao.findByOrderAndStatus(cart, ItemStatus.DELIVERED)).hasSize(1);
+        assertThat(orderItemDao.findByOrderAndStatus(cart, ItemStatus.DELIVERED)).isEmpty();
         assertThat(orderItemDao.getById(item.getId()).orElseThrow().getQuantity()).isEqualTo(3);
+        assertThat(orderItemDao.getById(item.getId()).orElseThrow().getStatus()).isNull();
         assertThat(orderItemDao.updateQuantity(item.getId(), 4)).isEqualTo(1);
+        assertThat(orderItemDao.findRefundableByOrder(cart)).isEmpty();
+        assertThat(orderItemDao.updateStatus(item.getId(), ItemStatus.DELIVERED)).isEqualTo(1);
         assertThat(orderItemDao.findRefundableByOrder(cart)).hasSize(1);
         assertThat(orderItemDao.updateStatus(item.getId(), ItemStatus.RETURNED)).isEqualTo(1);
         assertThat(orderItemDao.updateStatusByIds(java.util.List.of(item.getId()), ItemStatus.DELIVERED)).isEqualTo(1);
