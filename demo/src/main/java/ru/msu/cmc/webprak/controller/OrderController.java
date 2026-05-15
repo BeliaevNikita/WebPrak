@@ -61,7 +61,9 @@ public class OrderController {
     }
 
     @PostMapping("/orders/{id}/refund")
-    public String refund(@PathVariable Integer id, Model model) {
+    public String refund(@PathVariable Integer id,
+                         @RequestParam(required = false) java.util.List<Integer> itemIds,
+                         Model model) {
         orderDao.updateStatus(id, OrderStatus.REFUND_ATTEMPT);
         return "redirect:/orders/" + id;
     }
