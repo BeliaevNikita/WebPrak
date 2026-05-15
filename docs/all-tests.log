@@ -1,0 +1,259 @@
+Test run started: Fri May 15 21:52:14 MSK 2026
+StdOut ru.msu.cmc.webprak.dao.AuthorDaoIntegrationTest.ru.msu.cmc.webprak.dao.AuthorDaoIntegrationTest: 21:52:15.992 [Test worker] INFO org.testcontainers.images.PullPolicy -- Image pull policy will be performed by: DefaultPullPolicy()
+StdOut ru.msu.cmc.webprak.dao.AuthorDaoIntegrationTest.ru.msu.cmc.webprak.dao.AuthorDaoIntegrationTest: 21:52:16.001 [Test worker] INFO org.testcontainers.utility.ImageNameSubstitutor -- Image name substitution will be performed by: DefaultImageNameSubstitutor (composite of 'ConfigurationFileImageNameSubstitutor' and 'PrefixingImageNameSubstitutor')
+StdOut ru.msu.cmc.webprak.dao.AuthorDaoIntegrationTest.ru.msu.cmc.webprak.dao.AuthorDaoIntegrationTest: 21:52:16.011 [Test worker] INFO org.testcontainers.DockerClientFactory -- Testcontainers version: 2.0.5
+StdOut ru.msu.cmc.webprak.dao.AuthorDaoIntegrationTest.ru.msu.cmc.webprak.dao.AuthorDaoIntegrationTest: 21:52:16.439 [Test worker] INFO org.testcontainers.dockerclient.DockerClientProviderStrategy -- Loaded org.testcontainers.dockerclient.NpipeSocketClientProviderStrategy from ~/.testcontainers.properties, will try it first
+StdOut ru.msu.cmc.webprak.dao.AuthorDaoIntegrationTest.ru.msu.cmc.webprak.dao.AuthorDaoIntegrationTest: 21:52:16.958 [Test worker] INFO org.testcontainers.dockerclient.DockerClientProviderStrategy -- Found Docker environment with local Npipe socket (npipe:////./pipe/docker_engine)
+StdOut ru.msu.cmc.webprak.dao.AuthorDaoIntegrationTest.ru.msu.cmc.webprak.dao.AuthorDaoIntegrationTest: 21:52:16.961 [Test worker] INFO org.testcontainers.DockerClientFactory -- Docker host IP address is localhost
+StdOut ru.msu.cmc.webprak.dao.AuthorDaoIntegrationTest.ru.msu.cmc.webprak.dao.AuthorDaoIntegrationTest: 21:52:16.983 [Test worker] INFO org.testcontainers.DockerClientFactory -- Connected to docker:
+StdOut ru.msu.cmc.webprak.dao.AuthorDaoIntegrationTest.ru.msu.cmc.webprak.dao.AuthorDaoIntegrationTest: Server Version: 29.4.1
+StdOut ru.msu.cmc.webprak.dao.AuthorDaoIntegrationTest.ru.msu.cmc.webprak.dao.AuthorDaoIntegrationTest: API Version: 1.54
+StdOut ru.msu.cmc.webprak.dao.AuthorDaoIntegrationTest.ru.msu.cmc.webprak.dao.AuthorDaoIntegrationTest: Operating System: Docker Desktop
+StdOut ru.msu.cmc.webprak.dao.AuthorDaoIntegrationTest.ru.msu.cmc.webprak.dao.AuthorDaoIntegrationTest: Total Memory: 7901 MB
+StdOut ru.msu.cmc.webprak.dao.AuthorDaoIntegrationTest.ru.msu.cmc.webprak.dao.AuthorDaoIntegrationTest: Labels:
+StdOut ru.msu.cmc.webprak.dao.AuthorDaoIntegrationTest.ru.msu.cmc.webprak.dao.AuthorDaoIntegrationTest: com.docker.desktop.address=npipe://\\.\pipe\docker_cli
+StdOut ru.msu.cmc.webprak.dao.AuthorDaoIntegrationTest.ru.msu.cmc.webprak.dao.AuthorDaoIntegrationTest: 21:52:17.083 [Test worker] INFO tc.testcontainers/ryuk:0.14.0 -- Creating container for image: testcontainers/ryuk:0.14.0
+StdOut ru.msu.cmc.webprak.dao.AuthorDaoIntegrationTest.ru.msu.cmc.webprak.dao.AuthorDaoIntegrationTest: 21:52:17.383 [Test worker] INFO tc.testcontainers/ryuk:0.14.0 -- Container testcontainers/ryuk:0.14.0 is starting: dfe9deac9e3f07803500aaa72f70cdb2dbf9002f698331fd5d54cd61daeb9ec9
+StdOut ru.msu.cmc.webprak.dao.AuthorDaoIntegrationTest.ru.msu.cmc.webprak.dao.AuthorDaoIntegrationTest: 21:52:17.855 [Test worker] INFO tc.testcontainers/ryuk:0.14.0 -- Container testcontainers/ryuk:0.14.0 started in PT0.770992S
+StdOut ru.msu.cmc.webprak.dao.AuthorDaoIntegrationTest.ru.msu.cmc.webprak.dao.AuthorDaoIntegrationTest: 21:52:17.859 [Test worker] INFO org.testcontainers.utility.RyukResourceReaper -- Ryuk started - will monitor and terminate Testcontainers containers on JVM exit
+StdOut ru.msu.cmc.webprak.dao.AuthorDaoIntegrationTest.ru.msu.cmc.webprak.dao.AuthorDaoIntegrationTest: 21:52:17.860 [Test worker] INFO org.testcontainers.DockerClientFactory -- Checking the system...
+StdOut ru.msu.cmc.webprak.dao.AuthorDaoIntegrationTest.ru.msu.cmc.webprak.dao.AuthorDaoIntegrationTest: 21:52:17.860 [Test worker] INFO org.testcontainers.DockerClientFactory -- ✔︎ Docker server version should be at least 1.6.0
+StdOut ru.msu.cmc.webprak.dao.AuthorDaoIntegrationTest.ru.msu.cmc.webprak.dao.AuthorDaoIntegrationTest: 21:52:17.861 [Test worker] INFO tc.postgres:16-alpine -- Creating container for image: postgres:16-alpine
+StdOut ru.msu.cmc.webprak.dao.AuthorDaoIntegrationTest.ru.msu.cmc.webprak.dao.AuthorDaoIntegrationTest: 21:52:18.005 [Test worker] INFO tc.postgres:16-alpine -- Container postgres:16-alpine is starting: 13657686f737f5f1bcbdc08e32073fb7d6a637d7244552f4fe42c1eb008080fd
+StdOut ru.msu.cmc.webprak.dao.AuthorDaoIntegrationTest.ru.msu.cmc.webprak.dao.AuthorDaoIntegrationTest: 21:52:19.817 [Test worker] INFO tc.postgres:16-alpine -- Container postgres:16-alpine started in PT1.9558072S
+StdOut ru.msu.cmc.webprak.dao.AuthorDaoIntegrationTest.ru.msu.cmc.webprak.dao.AuthorDaoIntegrationTest: 21:52:19.818 [Test worker] INFO tc.postgres:16-alpine -- Container is started (JDBC URL: jdbc:postgresql://localhost:58442/book_store_test?loggerLevel=OFF)
+StdOut ru.msu.cmc.webprak.dao.AuthorDaoIntegrationTest.ru.msu.cmc.webprak.dao.AuthorDaoIntegrationTest: 
+StdOut ru.msu.cmc.webprak.dao.AuthorDaoIntegrationTest.ru.msu.cmc.webprak.dao.AuthorDaoIntegrationTest: .   ____          _            __ _ _
+StdOut ru.msu.cmc.webprak.dao.AuthorDaoIntegrationTest.ru.msu.cmc.webprak.dao.AuthorDaoIntegrationTest: /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+StdOut ru.msu.cmc.webprak.dao.AuthorDaoIntegrationTest.ru.msu.cmc.webprak.dao.AuthorDaoIntegrationTest: ( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+StdOut ru.msu.cmc.webprak.dao.AuthorDaoIntegrationTest.ru.msu.cmc.webprak.dao.AuthorDaoIntegrationTest: \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+StdOut ru.msu.cmc.webprak.dao.AuthorDaoIntegrationTest.ru.msu.cmc.webprak.dao.AuthorDaoIntegrationTest: '  |____| .__|_| |_|_| |_\__, | / / / /
+StdOut ru.msu.cmc.webprak.dao.AuthorDaoIntegrationTest.ru.msu.cmc.webprak.dao.AuthorDaoIntegrationTest: =========|_|==============|___/=/_/_/_/
+StdOut ru.msu.cmc.webprak.dao.AuthorDaoIntegrationTest.ru.msu.cmc.webprak.dao.AuthorDaoIntegrationTest: 
+StdOut ru.msu.cmc.webprak.dao.AuthorDaoIntegrationTest.ru.msu.cmc.webprak.dao.AuthorDaoIntegrationTest: :: Spring Boot ::                (v4.0.6)
+StdOut ru.msu.cmc.webprak.dao.AuthorDaoIntegrationTest.ru.msu.cmc.webprak.dao.AuthorDaoIntegrationTest: 
+StdOut ru.msu.cmc.webprak.dao.AuthorDaoIntegrationTest.ru.msu.cmc.webprak.dao.AuthorDaoIntegrationTest: 2026-05-15T21:52:20.167+03:00  INFO 14964 --- [demo] [    Test worker] r.m.c.w.dao.AuthorDaoIntegrationTest     : Starting AuthorDaoIntegrationTest using Java 17.0.18 with PID 14964 (started by Nikita in C:\Users\Nikita\Downloads\demo\demo)
+StdOut ru.msu.cmc.webprak.dao.AuthorDaoIntegrationTest.ru.msu.cmc.webprak.dao.AuthorDaoIntegrationTest: 2026-05-15T21:52:20.169+03:00  INFO 14964 --- [demo] [    Test worker] r.m.c.w.dao.AuthorDaoIntegrationTest     : No active profile set, falling back to 1 default profile: "default"
+StdOut ru.msu.cmc.webprak.dao.AuthorDaoIntegrationTest.ru.msu.cmc.webprak.dao.AuthorDaoIntegrationTest: 2026-05-15T21:52:20.768+03:00  INFO 14964 --- [demo] [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+StdOut ru.msu.cmc.webprak.dao.AuthorDaoIntegrationTest.ru.msu.cmc.webprak.dao.AuthorDaoIntegrationTest: 2026-05-15T21:52:20.800+03:00  INFO 14964 --- [demo] [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 19 ms. Found 0 JPA repository interfaces.
+StdOut ru.msu.cmc.webprak.dao.AuthorDaoIntegrationTest.ru.msu.cmc.webprak.dao.AuthorDaoIntegrationTest: 2026-05-15T21:52:21.206+03:00  INFO 14964 --- [demo] [    Test worker] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+StdOut ru.msu.cmc.webprak.dao.AuthorDaoIntegrationTest.ru.msu.cmc.webprak.dao.AuthorDaoIntegrationTest: 2026-05-15T21:52:21.285+03:00  INFO 14964 --- [demo] [    Test worker] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.2.12.Final
+StdOut ru.msu.cmc.webprak.dao.AuthorDaoIntegrationTest.ru.msu.cmc.webprak.dao.AuthorDaoIntegrationTest: 2026-05-15T21:52:21.858+03:00  INFO 14964 --- [demo] [    Test worker] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+StdOut ru.msu.cmc.webprak.dao.AuthorDaoIntegrationTest.ru.msu.cmc.webprak.dao.AuthorDaoIntegrationTest: 2026-05-15T21:52:22.101+03:00  WARN 14964 --- [demo] [    Test worker] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+StdOut ru.msu.cmc.webprak.dao.AuthorDaoIntegrationTest.ru.msu.cmc.webprak.dao.AuthorDaoIntegrationTest: 2026-05-15T21:52:22.128+03:00  INFO 14964 --- [demo] [    Test worker] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+StdOut ru.msu.cmc.webprak.dao.AuthorDaoIntegrationTest.ru.msu.cmc.webprak.dao.AuthorDaoIntegrationTest: Database JDBC URL [jdbc:postgresql://localhost:58442/book_store_test?loggerLevel=OFF]
+StdOut ru.msu.cmc.webprak.dao.AuthorDaoIntegrationTest.ru.msu.cmc.webprak.dao.AuthorDaoIntegrationTest: Database driver: PostgreSQL JDBC Driver
+StdOut ru.msu.cmc.webprak.dao.AuthorDaoIntegrationTest.ru.msu.cmc.webprak.dao.AuthorDaoIntegrationTest: Database dialect: PostgreSQLDialect
+StdOut ru.msu.cmc.webprak.dao.AuthorDaoIntegrationTest.ru.msu.cmc.webprak.dao.AuthorDaoIntegrationTest: Database version: 16.13
+StdOut ru.msu.cmc.webprak.dao.AuthorDaoIntegrationTest.ru.msu.cmc.webprak.dao.AuthorDaoIntegrationTest: Default catalog/schema: book_store_test/public
+StdOut ru.msu.cmc.webprak.dao.AuthorDaoIntegrationTest.ru.msu.cmc.webprak.dao.AuthorDaoIntegrationTest: Autocommit mode: undefined/unknown
+StdOut ru.msu.cmc.webprak.dao.AuthorDaoIntegrationTest.ru.msu.cmc.webprak.dao.AuthorDaoIntegrationTest: Isolation level: READ_COMMITTED [default READ_COMMITTED]
+StdOut ru.msu.cmc.webprak.dao.AuthorDaoIntegrationTest.ru.msu.cmc.webprak.dao.AuthorDaoIntegrationTest: JDBC fetch size: none
+StdOut ru.msu.cmc.webprak.dao.AuthorDaoIntegrationTest.ru.msu.cmc.webprak.dao.AuthorDaoIntegrationTest: Pool: DataSourceConnectionProvider
+StdOut ru.msu.cmc.webprak.dao.AuthorDaoIntegrationTest.ru.msu.cmc.webprak.dao.AuthorDaoIntegrationTest: Minimum pool size: undefined/unknown
+StdOut ru.msu.cmc.webprak.dao.AuthorDaoIntegrationTest.ru.msu.cmc.webprak.dao.AuthorDaoIntegrationTest: Maximum pool size: undefined/unknown
+StdOut ru.msu.cmc.webprak.dao.AuthorDaoIntegrationTest.ru.msu.cmc.webprak.dao.AuthorDaoIntegrationTest: 2026-05-15T21:52:23.398+03:00  INFO 14964 --- [demo] [    Test worker] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+StdOut ru.msu.cmc.webprak.dao.AuthorDaoIntegrationTest.ru.msu.cmc.webprak.dao.AuthorDaoIntegrationTest: 2026-05-15T21:52:23.516+03:00  INFO 14964 --- [demo] [    Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+StdOut ru.msu.cmc.webprak.dao.AuthorDaoIntegrationTest.ru.msu.cmc.webprak.dao.AuthorDaoIntegrationTest: 2026-05-15T21:52:23.721+03:00  WARN 14964 --- [demo] [    Test worker] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+StdOut ru.msu.cmc.webprak.dao.AuthorDaoIntegrationTest.ru.msu.cmc.webprak.dao.AuthorDaoIntegrationTest: 2026-05-15T21:52:23.741+03:00  INFO 14964 --- [demo] [    Test worker] o.s.b.w.a.WelcomePageHandlerMapping      : Adding welcome page template: index
+StdOut ru.msu.cmc.webprak.dao.AuthorDaoIntegrationTest.ru.msu.cmc.webprak.dao.AuthorDaoIntegrationTest: 2026-05-15T21:52:24.182+03:00  INFO 14964 --- [demo] [    Test worker] r.m.c.w.dao.AuthorDaoIntegrationTest     : Started AuthorDaoIntegrationTest in 4.324 seconds (process running for 9.88)
+START ru.msu.cmc.webprak.dao.AuthorDaoIntegrationTest.findByNameReturnsExactMatches()
+END ru.msu.cmc.webprak.dao.AuthorDaoIntegrationTest.findByNameReturnsExactMatches() -> SUCCESS (950 ms)
+START ru.msu.cmc.webprak.dao.AuthorDaoIntegrationTest.findByLastNameReturnsAllMatches()
+END ru.msu.cmc.webprak.dao.AuthorDaoIntegrationTest.findByLastNameReturnsAllMatches() -> SUCCESS (26 ms)
+START ru.msu.cmc.webprak.dao.AuthorDaoIntegrationTest.deleteByIdRemovesAuthor()
+END ru.msu.cmc.webprak.dao.AuthorDaoIntegrationTest.deleteByIdRemovesAuthor() -> SUCCESS (26 ms)
+START ru.msu.cmc.webprak.dao.AuthorDaoIntegrationTest.updateChangesAuthorFields()
+END ru.msu.cmc.webprak.dao.AuthorDaoIntegrationTest.updateChangesAuthorFields() -> SUCCESS (21 ms)
+START ru.msu.cmc.webprak.dao.AuthorDaoIntegrationTest.saveAndFindById()
+END ru.msu.cmc.webprak.dao.AuthorDaoIntegrationTest.saveAndFindById() -> SUCCESS (17 ms)
+START ru.msu.cmc.webprak.dao.AuthorDaoIntegrationTest.searchAndExistsMethodsSupportAuthorUseCases()
+END ru.msu.cmc.webprak.dao.AuthorDaoIntegrationTest.searchAndExistsMethodsSupportAuthorUseCases() -> SUCCESS (154 ms)
+START ru.msu.cmc.webprak.dao.CoverDaoIntegrationTest.saveFindUpdateDelete()
+END ru.msu.cmc.webprak.dao.CoverDaoIntegrationTest.saveFindUpdateDelete() -> SUCCESS (32 ms)
+START ru.msu.cmc.webprak.dao.CoverDaoIntegrationTest.searchExistsAndFindByWorkSupportCatalogFilters()
+END ru.msu.cmc.webprak.dao.CoverDaoIntegrationTest.searchExistsAndFindByWorkSupportCatalogFilters() -> SUCCESS (40 ms)
+START ru.msu.cmc.webprak.dao.CoverDaoIntegrationTest.findByCoverNameReturnsOptional()
+END ru.msu.cmc.webprak.dao.CoverDaoIntegrationTest.findByCoverNameReturnsOptional() -> SUCCESS (24 ms)
+START ru.msu.cmc.webprak.dao.EditionDaoIntegrationTest.saveFindUpdateDelete()
+END ru.msu.cmc.webprak.dao.EditionDaoIntegrationTest.saveFindUpdateDelete() -> SUCCESS (33 ms)
+START ru.msu.cmc.webprak.dao.EditionDaoIntegrationTest.catalogSearchCountPopularAndStockMethodsSupportStoreUseCases()
+StdOut ru.msu.cmc.webprak.dao.EditionDaoIntegrationTest.catalogSearchCountPopularAndStockMethodsSupportStoreUseCases(): 2026-05-15T21:52:25.653+03:00  WARN 14964 --- [demo] [    Test worker] org.hibernate.orm.query                  : HHH90003004: firstResult/maxResults specified with collection fetch; applying in memory
+StdOut ru.msu.cmc.webprak.dao.EditionDaoIntegrationTest.catalogSearchCountPopularAndStockMethodsSupportStoreUseCases(): 2026-05-15T21:52:25.694+03:00  WARN 14964 --- [demo] [    Test worker] org.hibernate.orm.query                  : HHH90003004: firstResult/maxResults specified with collection fetch; applying in memory
+StdOut ru.msu.cmc.webprak.dao.EditionDaoIntegrationTest.catalogSearchCountPopularAndStockMethodsSupportStoreUseCases(): 2026-05-15T21:52:25.707+03:00  WARN 14964 --- [demo] [    Test worker] org.hibernate.orm.query                  : HHH90003004: firstResult/maxResults specified with collection fetch; applying in memory
+StdOut ru.msu.cmc.webprak.dao.EditionDaoIntegrationTest.catalogSearchCountPopularAndStockMethodsSupportStoreUseCases(): 2026-05-15T21:52:25.711+03:00  WARN 14964 --- [demo] [    Test worker] org.hibernate.orm.query                  : HHH90003004: firstResult/maxResults specified with collection fetch; applying in memory
+StdOut ru.msu.cmc.webprak.dao.EditionDaoIntegrationTest.catalogSearchCountPopularAndStockMethodsSupportStoreUseCases(): 2026-05-15T21:52:25.714+03:00  WARN 14964 --- [demo] [    Test worker] org.hibernate.orm.query                  : HHH90003004: firstResult/maxResults specified with collection fetch; applying in memory
+StdOut ru.msu.cmc.webprak.dao.EditionDaoIntegrationTest.catalogSearchCountPopularAndStockMethodsSupportStoreUseCases(): 2026-05-15T21:52:25.720+03:00  WARN 14964 --- [demo] [    Test worker] org.hibernate.orm.query                  : HHH90003004: firstResult/maxResults specified with collection fetch; applying in memory
+END ru.msu.cmc.webprak.dao.EditionDaoIntegrationTest.catalogSearchCountPopularAndStockMethodsSupportStoreUseCases() -> SUCCESS (216 ms)
+START ru.msu.cmc.webprak.dao.EditionDaoIntegrationTest.findAvailableReturnsOnlyPositiveQuantity()
+StdOut ru.msu.cmc.webprak.dao.EditionDaoIntegrationTest.findAvailableReturnsOnlyPositiveQuantity(): 2026-05-15T21:52:25.810+03:00  WARN 14964 --- [demo] [    Test worker] org.hibernate.orm.query                  : HHH90003004: firstResult/maxResults specified with collection fetch; applying in memory
+END ru.msu.cmc.webprak.dao.EditionDaoIntegrationTest.findAvailableReturnsOnlyPositiveQuantity() -> SUCCESS (50 ms)
+START ru.msu.cmc.webprak.dao.EditionDaoIntegrationTest.findByWorkReturnsAllEditionsOfBook()
+END ru.msu.cmc.webprak.dao.EditionDaoIntegrationTest.findByWorkReturnsAllEditionsOfBook() -> SUCCESS (37 ms)
+START ru.msu.cmc.webprak.dao.OrderDaoIntegrationTest.findByClientReturnsCartAndHistoricalOrders()
+END ru.msu.cmc.webprak.dao.OrderDaoIntegrationTest.findByClientReturnsCartAndHistoricalOrders() -> SUCCESS (50 ms)
+START ru.msu.cmc.webprak.dao.OrderDaoIntegrationTest.findByStatusSupportsCartAndBackofficeFilters()
+END ru.msu.cmc.webprak.dao.OrderDaoIntegrationTest.findByStatusSupportsCartAndBackofficeFilters() -> SUCCESS (44 ms)
+START ru.msu.cmc.webprak.dao.OrderDaoIntegrationTest.findByClientReturnsEmptyListForClientWithoutOrders()
+END ru.msu.cmc.webprak.dao.OrderDaoIntegrationTest.findByClientReturnsEmptyListForClientWithoutOrders() -> SUCCESS (27 ms)
+START ru.msu.cmc.webprak.dao.OrderDaoIntegrationTest.saveFindUpdateDelete()
+END ru.msu.cmc.webprak.dao.OrderDaoIntegrationTest.saveFindUpdateDelete() -> SUCCESS (24 ms)
+START ru.msu.cmc.webprak.dao.OrderDaoIntegrationTest.checkoutStatusTotalAndBackofficeSearchMethodsSupportOrderUseCases()
+END ru.msu.cmc.webprak.dao.OrderDaoIntegrationTest.checkoutStatusTotalAndBackofficeSearchMethodsSupportOrderUseCases() -> SUCCESS (80 ms)
+START ru.msu.cmc.webprak.dao.OrderItemDaoIntegrationTest.findByStatusReturnsReturnedItemsForRefundFlow()
+END ru.msu.cmc.webprak.dao.OrderItemDaoIntegrationTest.findByStatusReturnsReturnedItemsForRefundFlow() -> SUCCESS (49 ms)
+START ru.msu.cmc.webprak.dao.OrderItemDaoIntegrationTest.saveFindUpdateDelete()
+END ru.msu.cmc.webprak.dao.OrderItemDaoIntegrationTest.saveFindUpdateDelete() -> SUCCESS (32 ms)
+START ru.msu.cmc.webprak.dao.OrderItemDaoIntegrationTest.findByOrderReturnsCartItems()
+StdOut ru.msu.cmc.webprak.dao.OrderItemDaoIntegrationTest.findByOrderReturnsCartItems(): 2026-05-15T21:52:26.224+03:00  WARN 14964 --- [demo] [    Test worker] org.hibernate.orm.query                  : HHH90003004: firstResult/maxResults specified with collection fetch; applying in memory
+END ru.msu.cmc.webprak.dao.OrderItemDaoIntegrationTest.findByOrderReturnsCartItems() -> SUCCESS (50 ms)
+START ru.msu.cmc.webprak.dao.OrderItemDaoIntegrationTest.cartQuantityDeleteStatusBatchAndRefundableMethodsSupportItemUseCases()
+END ru.msu.cmc.webprak.dao.OrderItemDaoIntegrationTest.cartQuantityDeleteStatusBatchAndRefundableMethodsSupportItemUseCases() -> SUCCESS (71 ms)
+START ru.msu.cmc.webprak.dao.UserDaoIntegrationTest.loginEmailExistsAndAuthenticationMethodsSupportUserUseCases()
+END ru.msu.cmc.webprak.dao.UserDaoIntegrationTest.loginEmailExistsAndAuthenticationMethodsSupportUserUseCases() -> SUCCESS (63 ms)
+START ru.msu.cmc.webprak.dao.UserDaoIntegrationTest.findByRoleReturnsAllUsersWithRole()
+END ru.msu.cmc.webprak.dao.UserDaoIntegrationTest.findByRoleReturnsAllUsersWithRole() -> SUCCESS (41 ms)
+START ru.msu.cmc.webprak.dao.UserDaoIntegrationTest.saveFindUpdateDelete()
+END ru.msu.cmc.webprak.dao.UserDaoIntegrationTest.saveFindUpdateDelete() -> SUCCESS (21 ms)
+START ru.msu.cmc.webprak.dao.UserDaoIntegrationTest.findByLoginReturnsOptional()
+END ru.msu.cmc.webprak.dao.UserDaoIntegrationTest.findByLoginReturnsOptional() -> SUCCESS (25 ms)
+START ru.msu.cmc.webprak.dao.WorkDaoIntegrationTest.searchPaginationCountAndFetchAuthorsSupportCatalogUseCases()
+END ru.msu.cmc.webprak.dao.WorkDaoIntegrationTest.searchPaginationCountAndFetchAuthorsSupportCatalogUseCases() -> SUCCESS (32 ms)
+START ru.msu.cmc.webprak.dao.WorkDaoIntegrationTest.saveFindUpdateDelete()
+END ru.msu.cmc.webprak.dao.WorkDaoIntegrationTest.saveFindUpdateDelete() -> SUCCESS (16 ms)
+START ru.msu.cmc.webprak.dao.WorkDaoIntegrationTest.findByTitleIsExactAndCaseSensitive()
+END ru.msu.cmc.webprak.dao.WorkDaoIntegrationTest.findByTitleIsExactAndCaseSensitive() -> SUCCESS (20 ms)
+START ru.msu.cmc.webprak.dao.WorkDaoIntegrationTest.findByAuthorReturnsWorksForAuthor()
+END ru.msu.cmc.webprak.dao.WorkDaoIntegrationTest.findByAuthorReturnsWorksForAuthor() -> SUCCESS (25 ms)
+StdOut ru.msu.cmc.webprak.web.CustomerAddBookToCartUseCaseTest.ru.msu.cmc.webprak.web.CustomerAddBookToCartUseCaseTest: 2026-05-15T21:52:26.581+03:00  INFO 14964 --- [demo] [    Test worker] tc.postgres:16-alpine                    : Creating container for image: postgres:16-alpine
+StdOut ru.msu.cmc.webprak.web.CustomerAddBookToCartUseCaseTest.ru.msu.cmc.webprak.web.CustomerAddBookToCartUseCaseTest: 2026-05-15T21:52:26.741+03:00  INFO 14964 --- [demo] [    Test worker] tc.postgres:16-alpine                    : Container postgres:16-alpine is starting: 5ca4c7ec6682ae3453fedede56de60186269a580335265d873b493aa9352a738
+StdOut ru.msu.cmc.webprak.web.CustomerAddBookToCartUseCaseTest.ru.msu.cmc.webprak.web.CustomerAddBookToCartUseCaseTest: 2026-05-15T21:52:28.409+03:00  INFO 14964 --- [demo] [    Test worker] tc.postgres:16-alpine                    : Container postgres:16-alpine started in PT1.8276063S
+StdOut ru.msu.cmc.webprak.web.CustomerAddBookToCartUseCaseTest.ru.msu.cmc.webprak.web.CustomerAddBookToCartUseCaseTest: 2026-05-15T21:52:28.409+03:00  INFO 14964 --- [demo] [    Test worker] tc.postgres:16-alpine                    : Container is started (JDBC URL: jdbc:postgresql://localhost:58476/book_store_web_test?loggerLevel=OFF)
+StdOut ru.msu.cmc.webprak.web.CustomerAddBookToCartUseCaseTest.ru.msu.cmc.webprak.web.CustomerAddBookToCartUseCaseTest: 
+StdOut ru.msu.cmc.webprak.web.CustomerAddBookToCartUseCaseTest.ru.msu.cmc.webprak.web.CustomerAddBookToCartUseCaseTest: .   ____          _            __ _ _
+StdOut ru.msu.cmc.webprak.web.CustomerAddBookToCartUseCaseTest.ru.msu.cmc.webprak.web.CustomerAddBookToCartUseCaseTest: /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+StdOut ru.msu.cmc.webprak.web.CustomerAddBookToCartUseCaseTest.ru.msu.cmc.webprak.web.CustomerAddBookToCartUseCaseTest: ( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+StdOut ru.msu.cmc.webprak.web.CustomerAddBookToCartUseCaseTest.ru.msu.cmc.webprak.web.CustomerAddBookToCartUseCaseTest: \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+StdOut ru.msu.cmc.webprak.web.CustomerAddBookToCartUseCaseTest.ru.msu.cmc.webprak.web.CustomerAddBookToCartUseCaseTest: '  |____| .__|_| |_|_| |_\__, | / / / /
+StdOut ru.msu.cmc.webprak.web.CustomerAddBookToCartUseCaseTest.ru.msu.cmc.webprak.web.CustomerAddBookToCartUseCaseTest: =========|_|==============|___/=/_/_/_/
+StdOut ru.msu.cmc.webprak.web.CustomerAddBookToCartUseCaseTest.ru.msu.cmc.webprak.web.CustomerAddBookToCartUseCaseTest: 
+StdOut ru.msu.cmc.webprak.web.CustomerAddBookToCartUseCaseTest.ru.msu.cmc.webprak.web.CustomerAddBookToCartUseCaseTest: :: Spring Boot ::                (v4.0.6)
+StdOut ru.msu.cmc.webprak.web.CustomerAddBookToCartUseCaseTest.ru.msu.cmc.webprak.web.CustomerAddBookToCartUseCaseTest: 
+StdOut ru.msu.cmc.webprak.web.CustomerAddBookToCartUseCaseTest.ru.msu.cmc.webprak.web.CustomerAddBookToCartUseCaseTest: 2026-05-15T21:52:28.436+03:00  INFO 14964 --- [demo] [    Test worker] m.c.w.w.CustomerAddBookToCartUseCaseTest : Starting CustomerAddBookToCartUseCaseTest using Java 17.0.18 with PID 14964 (started by Nikita in C:\Users\Nikita\Downloads\demo\demo)
+StdOut ru.msu.cmc.webprak.web.CustomerAddBookToCartUseCaseTest.ru.msu.cmc.webprak.web.CustomerAddBookToCartUseCaseTest: 2026-05-15T21:52:28.436+03:00  INFO 14964 --- [demo] [    Test worker] m.c.w.w.CustomerAddBookToCartUseCaseTest : No active profile set, falling back to 1 default profile: "default"
+StdOut ru.msu.cmc.webprak.web.CustomerAddBookToCartUseCaseTest.ru.msu.cmc.webprak.web.CustomerAddBookToCartUseCaseTest: 2026-05-15T21:52:28.548+03:00  INFO 14964 --- [demo] [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+StdOut ru.msu.cmc.webprak.web.CustomerAddBookToCartUseCaseTest.ru.msu.cmc.webprak.web.CustomerAddBookToCartUseCaseTest: 2026-05-15T21:52:28.553+03:00  INFO 14964 --- [demo] [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 3 ms. Found 0 JPA repository interfaces.
+StdOut ru.msu.cmc.webprak.web.CustomerAddBookToCartUseCaseTest.ru.msu.cmc.webprak.web.CustomerAddBookToCartUseCaseTest: 2026-05-15T21:52:28.737+03:00  INFO 14964 --- [demo] [    Test worker] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 0 (http)
+StdOut ru.msu.cmc.webprak.web.CustomerAddBookToCartUseCaseTest.ru.msu.cmc.webprak.web.CustomerAddBookToCartUseCaseTest: 2026-05-15T21:52:28.752+03:00  INFO 14964 --- [demo] [    Test worker] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+StdOut ru.msu.cmc.webprak.web.CustomerAddBookToCartUseCaseTest.ru.msu.cmc.webprak.web.CustomerAddBookToCartUseCaseTest: 2026-05-15T21:52:28.752+03:00  INFO 14964 --- [demo] [    Test worker] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.21]
+StdOut ru.msu.cmc.webprak.web.CustomerAddBookToCartUseCaseTest.ru.msu.cmc.webprak.web.CustomerAddBookToCartUseCaseTest: 2026-05-15T21:52:28.811+03:00  INFO 14964 --- [demo] [    Test worker] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 373 ms
+StdOut ru.msu.cmc.webprak.web.CustomerAddBookToCartUseCaseTest.ru.msu.cmc.webprak.web.CustomerAddBookToCartUseCaseTest: 2026-05-15T21:52:28.871+03:00  INFO 14964 --- [demo] [    Test worker] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+StdOut ru.msu.cmc.webprak.web.CustomerAddBookToCartUseCaseTest.ru.msu.cmc.webprak.web.CustomerAddBookToCartUseCaseTest: 2026-05-15T21:52:28.896+03:00  INFO 14964 --- [demo] [    Test worker] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+StdOut ru.msu.cmc.webprak.web.CustomerAddBookToCartUseCaseTest.ru.msu.cmc.webprak.web.CustomerAddBookToCartUseCaseTest: 2026-05-15T21:52:28.920+03:00  WARN 14964 --- [demo] [    Test worker] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+StdOut ru.msu.cmc.webprak.web.CustomerAddBookToCartUseCaseTest.ru.msu.cmc.webprak.web.CustomerAddBookToCartUseCaseTest: 2026-05-15T21:52:28.925+03:00  INFO 14964 --- [demo] [    Test worker] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+StdOut ru.msu.cmc.webprak.web.CustomerAddBookToCartUseCaseTest.ru.msu.cmc.webprak.web.CustomerAddBookToCartUseCaseTest: Database JDBC URL [jdbc:postgresql://localhost:58476/book_store_web_test?loggerLevel=OFF]
+StdOut ru.msu.cmc.webprak.web.CustomerAddBookToCartUseCaseTest.ru.msu.cmc.webprak.web.CustomerAddBookToCartUseCaseTest: Database driver: PostgreSQL JDBC Driver
+StdOut ru.msu.cmc.webprak.web.CustomerAddBookToCartUseCaseTest.ru.msu.cmc.webprak.web.CustomerAddBookToCartUseCaseTest: Database dialect: PostgreSQLDialect
+StdOut ru.msu.cmc.webprak.web.CustomerAddBookToCartUseCaseTest.ru.msu.cmc.webprak.web.CustomerAddBookToCartUseCaseTest: Database version: 16.13
+StdOut ru.msu.cmc.webprak.web.CustomerAddBookToCartUseCaseTest.ru.msu.cmc.webprak.web.CustomerAddBookToCartUseCaseTest: Default catalog/schema: book_store_web_test/public
+StdOut ru.msu.cmc.webprak.web.CustomerAddBookToCartUseCaseTest.ru.msu.cmc.webprak.web.CustomerAddBookToCartUseCaseTest: Autocommit mode: undefined/unknown
+StdOut ru.msu.cmc.webprak.web.CustomerAddBookToCartUseCaseTest.ru.msu.cmc.webprak.web.CustomerAddBookToCartUseCaseTest: Isolation level: READ_COMMITTED [default READ_COMMITTED]
+StdOut ru.msu.cmc.webprak.web.CustomerAddBookToCartUseCaseTest.ru.msu.cmc.webprak.web.CustomerAddBookToCartUseCaseTest: JDBC fetch size: none
+StdOut ru.msu.cmc.webprak.web.CustomerAddBookToCartUseCaseTest.ru.msu.cmc.webprak.web.CustomerAddBookToCartUseCaseTest: Pool: DataSourceConnectionProvider
+StdOut ru.msu.cmc.webprak.web.CustomerAddBookToCartUseCaseTest.ru.msu.cmc.webprak.web.CustomerAddBookToCartUseCaseTest: Minimum pool size: undefined/unknown
+StdOut ru.msu.cmc.webprak.web.CustomerAddBookToCartUseCaseTest.ru.msu.cmc.webprak.web.CustomerAddBookToCartUseCaseTest: Maximum pool size: undefined/unknown
+StdOut ru.msu.cmc.webprak.web.CustomerAddBookToCartUseCaseTest.ru.msu.cmc.webprak.web.CustomerAddBookToCartUseCaseTest: 2026-05-15T21:52:28.973+03:00  INFO 14964 --- [demo] [    Test worker] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+StdOut ru.msu.cmc.webprak.web.CustomerAddBookToCartUseCaseTest.ru.msu.cmc.webprak.web.CustomerAddBookToCartUseCaseTest: 2026-05-15T21:52:29.049+03:00  INFO 14964 --- [demo] [    Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+StdOut ru.msu.cmc.webprak.web.CustomerAddBookToCartUseCaseTest.ru.msu.cmc.webprak.web.CustomerAddBookToCartUseCaseTest: 2026-05-15T21:52:29.065+03:00  WARN 14964 --- [demo] [    Test worker] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+StdOut ru.msu.cmc.webprak.web.CustomerAddBookToCartUseCaseTest.ru.msu.cmc.webprak.web.CustomerAddBookToCartUseCaseTest: 2026-05-15T21:52:29.070+03:00  INFO 14964 --- [demo] [    Test worker] o.s.b.w.a.WelcomePageHandlerMapping      : Adding welcome page template: index
+StdOut ru.msu.cmc.webprak.web.CustomerAddBookToCartUseCaseTest.ru.msu.cmc.webprak.web.CustomerAddBookToCartUseCaseTest: 2026-05-15T21:52:29.153+03:00  INFO 14964 --- [demo] [    Test worker] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 58480 (http) with context path '/'
+StdOut ru.msu.cmc.webprak.web.CustomerAddBookToCartUseCaseTest.ru.msu.cmc.webprak.web.CustomerAddBookToCartUseCaseTest: 2026-05-15T21:52:29.155+03:00  INFO 14964 --- [demo] [    Test worker] m.c.w.w.CustomerAddBookToCartUseCaseTest : Started CustomerAddBookToCartUseCaseTest in 0.742 seconds (process running for 14.853)
+START ru.msu.cmc.webprak.web.CustomerAddBookToCartUseCaseTest.customerCanOpenBookAndAddToCart()
+StdOut ru.msu.cmc.webprak.web.CustomerAddBookToCartUseCaseTest.customerCanOpenBookAndAddToCart(): 2026-05-15T21:52:29.914+03:00  WARN 14964 --- [demo] [    Test worker] o.o.selenium.devtools.CdpVersionFinder   : Unable to find an exact match for CDP version 148, returning the closest version; found: 147; Please update to a Selenium version that supports CDP version 148
+StdOut ru.msu.cmc.webprak.web.CustomerAddBookToCartUseCaseTest.customerCanOpenBookAndAddToCart(): 2026-05-15T21:52:30.067+03:00  INFO 14964 --- [demo] [o-auto-1-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+StdOut ru.msu.cmc.webprak.web.CustomerAddBookToCartUseCaseTest.customerCanOpenBookAndAddToCart(): 2026-05-15T21:52:30.067+03:00  INFO 14964 --- [demo] [o-auto-1-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+StdOut ru.msu.cmc.webprak.web.CustomerAddBookToCartUseCaseTest.customerCanOpenBookAndAddToCart(): 2026-05-15T21:52:30.068+03:00  INFO 14964 --- [demo] [o-auto-1-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+END ru.msu.cmc.webprak.web.CustomerAddBookToCartUseCaseTest.customerCanOpenBookAndAddToCart() -> SUCCESS (2861 ms)
+START ru.msu.cmc.webprak.web.CustomerAddBookToCartUseCaseTest.anonymousCustomerAddingBookRedirectsToLogin()
+StdOut ru.msu.cmc.webprak.web.CustomerAddBookToCartUseCaseTest.anonymousCustomerAddingBookRedirectsToLogin(): 2026-05-15T21:52:32.469+03:00  WARN 14964 --- [demo] [    Test worker] o.o.selenium.devtools.CdpVersionFinder   : Unable to find an exact match for CDP version 148, returning the closest version; found: 147; Please update to a Selenium version that supports CDP version 148
+END ru.msu.cmc.webprak.web.CustomerAddBookToCartUseCaseTest.anonymousCustomerAddingBookRedirectsToLogin() -> SUCCESS (1116 ms)
+START ru.msu.cmc.webprak.web.CustomerCatalogUseCaseTest.customerCanSearchAndFilterCatalog()
+StdOut ru.msu.cmc.webprak.web.CustomerCatalogUseCaseTest.customerCanSearchAndFilterCatalog(): 2026-05-15T21:52:33.585+03:00  WARN 14964 --- [demo] [    Test worker] o.o.selenium.devtools.CdpVersionFinder   : Unable to find an exact match for CDP version 148, returning the closest version; found: 147; Please update to a Selenium version that supports CDP version 148
+StdOut ru.msu.cmc.webprak.web.CustomerCatalogUseCaseTest.customerCanSearchAndFilterCatalog(): 2026-05-15T21:52:34.679+03:00  WARN 14964 --- [demo] [o-auto-1-exec-5] org.hibernate.orm.query                  : HHH90003004: firstResult/maxResults specified with collection fetch; applying in memory
+StdOut ru.msu.cmc.webprak.web.CustomerCatalogUseCaseTest.customerCanSearchAndFilterCatalog(): 2026-05-15T21:52:34.848+03:00  WARN 14964 --- [demo] [o-auto-1-exec-6] org.hibernate.orm.query                  : HHH90003004: firstResult/maxResults specified with collection fetch; applying in memory
+StdOut ru.msu.cmc.webprak.web.CustomerCatalogUseCaseTest.customerCanSearchAndFilterCatalog(): 2026-05-15T21:52:35.431+03:00  WARN 14964 --- [demo] [o-auto-1-exec-8] org.hibernate.orm.query                  : HHH90003004: firstResult/maxResults specified with collection fetch; applying in memory
+END ru.msu.cmc.webprak.web.CustomerCatalogUseCaseTest.customerCanSearchAndFilterCatalog() -> SUCCESS (2418 ms)
+START ru.msu.cmc.webprak.web.CustomerCheckoutUseCaseTest.customerCanOpenDraftCartFromProfile()
+StdOut ru.msu.cmc.webprak.web.CustomerCheckoutUseCaseTest.customerCanOpenDraftCartFromProfile(): 2026-05-15T21:52:36.018+03:00  WARN 14964 --- [demo] [    Test worker] o.o.selenium.devtools.CdpVersionFinder   : Unable to find an exact match for CDP version 148, returning the closest version; found: 147; Please update to a Selenium version that supports CDP version 148
+END ru.msu.cmc.webprak.web.CustomerCheckoutUseCaseTest.customerCanOpenDraftCartFromProfile() -> SUCCESS (1729 ms)
+START ru.msu.cmc.webprak.web.CustomerCheckoutUseCaseTest.customerCanCheckoutSelectedCartItems()
+StdOut ru.msu.cmc.webprak.web.CustomerCheckoutUseCaseTest.customerCanCheckoutSelectedCartItems(): 2026-05-15T21:52:37.826+03:00  WARN 14964 --- [demo] [    Test worker] o.o.selenium.devtools.CdpVersionFinder   : Unable to find an exact match for CDP version 148, returning the closest version; found: 147; Please update to a Selenium version that supports CDP version 148
+END ru.msu.cmc.webprak.web.CustomerCheckoutUseCaseTest.customerCanCheckoutSelectedCartItems() -> SUCCESS (2452 ms)
+START ru.msu.cmc.webprak.web.CustomerEditProfileUseCaseTest.customerCanEditProfile()
+StdOut ru.msu.cmc.webprak.web.CustomerEditProfileUseCaseTest.customerCanEditProfile(): 2026-05-15T21:52:40.225+03:00  WARN 14964 --- [demo] [    Test worker] o.o.selenium.devtools.CdpVersionFinder   : Unable to find an exact match for CDP version 148, returning the closest version; found: 147; Please update to a Selenium version that supports CDP version 148
+END ru.msu.cmc.webprak.web.CustomerEditProfileUseCaseTest.customerCanEditProfile() -> SUCCESS (2043 ms)
+START ru.msu.cmc.webprak.web.CustomerLoginProfileUseCaseTest.anonymousCustomerOpeningProfileRedirectsToLogin()
+StdOut ru.msu.cmc.webprak.web.CustomerLoginProfileUseCaseTest.anonymousCustomerOpeningProfileRedirectsToLogin(): 2026-05-15T21:52:42.293+03:00  WARN 14964 --- [demo] [    Test worker] o.o.selenium.devtools.CdpVersionFinder   : Unable to find an exact match for CDP version 148, returning the closest version; found: 147; Please update to a Selenium version that supports CDP version 148
+END ru.msu.cmc.webprak.web.CustomerLoginProfileUseCaseTest.anonymousCustomerOpeningProfileRedirectsToLogin() -> SUCCESS (1101 ms)
+START ru.msu.cmc.webprak.web.CustomerLoginProfileUseCaseTest.customerCanLoginAndOpenProfile()
+StdOut ru.msu.cmc.webprak.web.CustomerLoginProfileUseCaseTest.customerCanLoginAndOpenProfile(): 2026-05-15T21:52:43.351+03:00  WARN 14964 --- [demo] [    Test worker] o.o.selenium.devtools.CdpVersionFinder   : Unable to find an exact match for CDP version 148, returning the closest version; found: 147; Please update to a Selenium version that supports CDP version 148
+END ru.msu.cmc.webprak.web.CustomerLoginProfileUseCaseTest.customerCanLoginAndOpenProfile() -> SUCCESS (1643 ms)
+START ru.msu.cmc.webprak.web.CustomerRefundUseCaseTest.customerCanRequestRefundForSelectedItems()
+StdOut ru.msu.cmc.webprak.web.CustomerRefundUseCaseTest.customerCanRequestRefundForSelectedItems(): 2026-05-15T21:52:45.042+03:00  WARN 14964 --- [demo] [    Test worker] o.o.selenium.devtools.CdpVersionFinder   : Unable to find an exact match for CDP version 148, returning the closest version; found: 147; Please update to a Selenium version that supports CDP version 148
+END ru.msu.cmc.webprak.web.CustomerRefundUseCaseTest.customerCanRequestRefundForSelectedItems() -> SUCCESS (1517 ms)
+START ru.msu.cmc.webprak.web.CustomerRefundUseCaseTest.customerCanOpenOrderDetails()
+StdOut ru.msu.cmc.webprak.web.CustomerRefundUseCaseTest.customerCanOpenOrderDetails(): 2026-05-15T21:52:46.525+03:00  WARN 14964 --- [demo] [    Test worker] o.o.selenium.devtools.CdpVersionFinder   : Unable to find an exact match for CDP version 148, returning the closest version; found: 147; Please update to a Selenium version that supports CDP version 148
+END ru.msu.cmc.webprak.web.CustomerRefundUseCaseTest.customerCanOpenOrderDetails() -> SUCCESS (1778 ms)
+START ru.msu.cmc.webprak.web.EmployeeBookManagementUseCaseTest.employeeCanEditBook()
+StdOut ru.msu.cmc.webprak.web.EmployeeBookManagementUseCaseTest.employeeCanEditBook(): 2026-05-15T21:52:48.334+03:00  WARN 14964 --- [demo] [    Test worker] o.o.selenium.devtools.CdpVersionFinder   : Unable to find an exact match for CDP version 148, returning the closest version; found: 147; Please update to a Selenium version that supports CDP version 148
+StdOut ru.msu.cmc.webprak.web.EmployeeBookManagementUseCaseTest.employeeCanEditBook(): 2026-05-15T21:52:49.447+03:00  WARN 14964 --- [demo] [o-auto-1-exec-2] org.hibernate.orm.query                  : HHH90003004: firstResult/maxResults specified with collection fetch; applying in memory
+StdOut ru.msu.cmc.webprak.web.EmployeeBookManagementUseCaseTest.employeeCanEditBook(): 2026-05-15T21:52:49.697+03:00  WARN 14964 --- [demo] [o-auto-1-exec-4] org.hibernate.orm.query                  : HHH90003004: firstResult/maxResults specified with collection fetch; applying in memory
+END ru.msu.cmc.webprak.web.EmployeeBookManagementUseCaseTest.employeeCanEditBook() -> SUCCESS (2007 ms)
+START ru.msu.cmc.webprak.web.EmployeeBookManagementUseCaseTest.employeeCanAddBook()
+StdOut ru.msu.cmc.webprak.web.EmployeeBookManagementUseCaseTest.employeeCanAddBook(): 2026-05-15T21:52:50.363+03:00  WARN 14964 --- [demo] [    Test worker] o.o.selenium.devtools.CdpVersionFinder   : Unable to find an exact match for CDP version 148, returning the closest version; found: 147; Please update to a Selenium version that supports CDP version 148
+StdOut ru.msu.cmc.webprak.web.EmployeeBookManagementUseCaseTest.employeeCanAddBook(): 2026-05-15T21:52:51.771+03:00  WARN 14964 --- [demo] [o-auto-1-exec-3] org.hibernate.orm.query                  : HHH90003004: firstResult/maxResults specified with collection fetch; applying in memory
+StdOut ru.msu.cmc.webprak.web.EmployeeBookManagementUseCaseTest.employeeCanAddBook(): 2026-05-15T21:52:52.644+03:00  WARN 14964 --- [demo] [o-auto-1-exec-5] org.hibernate.orm.query                  : HHH90003004: firstResult/maxResults specified with collection fetch; applying in memory
+StdOut ru.msu.cmc.webprak.web.EmployeeBookManagementUseCaseTest.employeeCanAddBook(): 2026-05-15T21:52:53.188+03:00  WARN 14964 --- [demo] [    Test worker] org.hibernate.orm.query                  : HHH90003004: firstResult/maxResults specified with collection fetch; applying in memory
+END ru.msu.cmc.webprak.web.EmployeeBookManagementUseCaseTest.employeeCanAddBook() -> SUCCESS (3432 ms)
+START ru.msu.cmc.webprak.web.EmployeeBookManagementUseCaseTest.employeeCanDeleteBook()
+StdOut ru.msu.cmc.webprak.web.EmployeeBookManagementUseCaseTest.employeeCanDeleteBook(): 2026-05-15T21:52:53.727+03:00  WARN 14964 --- [demo] [    Test worker] o.o.selenium.devtools.CdpVersionFinder   : Unable to find an exact match for CDP version 148, returning the closest version; found: 147; Please update to a Selenium version that supports CDP version 148
+StdOut ru.msu.cmc.webprak.web.EmployeeBookManagementUseCaseTest.employeeCanDeleteBook(): 2026-05-15T21:52:55.730+03:00  WARN 14964 --- [demo] [o-auto-1-exec-4] org.hibernate.orm.query                  : HHH90003004: firstResult/maxResults specified with collection fetch; applying in memory
+StdOut ru.msu.cmc.webprak.web.EmployeeBookManagementUseCaseTest.employeeCanDeleteBook(): 2026-05-15T21:52:56.608+03:00  WARN 14964 --- [demo] [o-auto-1-exec-6] org.hibernate.orm.query                  : HHH90003004: firstResult/maxResults specified with collection fetch; applying in memory
+StdOut ru.msu.cmc.webprak.web.EmployeeBookManagementUseCaseTest.employeeCanDeleteBook(): 2026-05-15T21:52:56.715+03:00  WARN 14964 --- [demo] [o-auto-1-exec-8] org.hibernate.orm.query                  : HHH90003004: firstResult/maxResults specified with collection fetch; applying in memory
+StdOut ru.msu.cmc.webprak.web.EmployeeBookManagementUseCaseTest.employeeCanDeleteBook(): 2026-05-15T21:52:58.780+03:00  WARN 14964 --- [demo] [    Test worker] org.hibernate.orm.query                  : HHH90003004: firstResult/maxResults specified with collection fetch; applying in memory
+END ru.msu.cmc.webprak.web.EmployeeBookManagementUseCaseTest.employeeCanDeleteBook() -> SUCCESS (5597 ms)
+START ru.msu.cmc.webprak.web.EmployeeLoginUseCaseTest.employeeCanLoginAndSeeDashboard()
+StdOut ru.msu.cmc.webprak.web.EmployeeLoginUseCaseTest.employeeCanLoginAndSeeDashboard(): 2026-05-15T21:52:59.350+03:00  WARN 14964 --- [demo] [    Test worker] o.o.selenium.devtools.CdpVersionFinder   : Unable to find an exact match for CDP version 148, returning the closest version; found: 147; Please update to a Selenium version that supports CDP version 148
+END ru.msu.cmc.webprak.web.EmployeeLoginUseCaseTest.employeeCanLoginAndSeeDashboard() -> SUCCESS (1648 ms)
+START ru.msu.cmc.webprak.web.EmployeeOrderStatusUseCaseTest.employeeCanChangeOrderStatus()
+StdOut ru.msu.cmc.webprak.web.EmployeeOrderStatusUseCaseTest.employeeCanChangeOrderStatus(): 2026-05-15T21:53:00.990+03:00  WARN 14964 --- [demo] [    Test worker] o.o.selenium.devtools.CdpVersionFinder   : Unable to find an exact match for CDP version 148, returning the closest version; found: 147; Please update to a Selenium version that supports CDP version 148
+END ru.msu.cmc.webprak.web.EmployeeOrderStatusUseCaseTest.employeeCanChangeOrderStatus() -> SUCCESS (1511 ms)
+START ru.msu.cmc.webprak.web.EmployeeRefundApprovalUseCaseTest.employeeCanApproveRefundForSelectedItems()
+StdOut ru.msu.cmc.webprak.web.EmployeeRefundApprovalUseCaseTest.employeeCanApproveRefundForSelectedItems(): 2026-05-15T21:53:02.537+03:00  WARN 14964 --- [demo] [    Test worker] o.o.selenium.devtools.CdpVersionFinder   : Unable to find an exact match for CDP version 148, returning the closest version; found: 147; Please update to a Selenium version that supports CDP version 148
+END ru.msu.cmc.webprak.web.EmployeeRefundApprovalUseCaseTest.employeeCanApproveRefundForSelectedItems() -> SUCCESS (1927 ms)
+START ru.msu.cmc.webprak.web.SeleniumWebIntegrationTest.employeeCanChangeOrderStatusAndApproveSelectedRefundItems()
+StdOut ru.msu.cmc.webprak.web.SeleniumWebIntegrationTest.employeeCanChangeOrderStatusAndApproveSelectedRefundItems(): 2026-05-15T21:53:04.469+03:00  WARN 14964 --- [demo] [    Test worker] o.o.selenium.devtools.CdpVersionFinder   : Unable to find an exact match for CDP version 148, returning the closest version; found: 147; Please update to a Selenium version that supports CDP version 148
+END ru.msu.cmc.webprak.web.SeleniumWebIntegrationTest.employeeCanChangeOrderStatusAndApproveSelectedRefundItems() -> SUCCESS (3216 ms)
+START ru.msu.cmc.webprak.web.SeleniumWebIntegrationTest.customerCanSearchFilterOpenBookAddCartFromProfileAndCheckoutSelectedItems()
+StdOut ru.msu.cmc.webprak.web.SeleniumWebIntegrationTest.customerCanSearchFilterOpenBookAddCartFromProfileAndCheckoutSelectedItems(): 2026-05-15T21:53:07.660+03:00  WARN 14964 --- [demo] [    Test worker] o.o.selenium.devtools.CdpVersionFinder   : Unable to find an exact match for CDP version 148, returning the closest version; found: 147; Please update to a Selenium version that supports CDP version 148
+StdOut ru.msu.cmc.webprak.web.SeleniumWebIntegrationTest.customerCanSearchFilterOpenBookAddCartFromProfileAndCheckoutSelectedItems(): 2026-05-15T21:53:08.342+03:00  WARN 14964 --- [demo] [o-auto-1-exec-9] org.hibernate.orm.query                  : HHH90003004: firstResult/maxResults specified with collection fetch; applying in memory
+StdOut ru.msu.cmc.webprak.web.SeleniumWebIntegrationTest.customerCanSearchFilterOpenBookAddCartFromProfileAndCheckoutSelectedItems(): 2026-05-15T21:53:08.496+03:00  WARN 14964 --- [demo] [o-auto-1-exec-3] org.hibernate.orm.query                  : HHH90003004: firstResult/maxResults specified with collection fetch; applying in memory
+StdOut ru.msu.cmc.webprak.web.SeleniumWebIntegrationTest.customerCanSearchFilterOpenBookAddCartFromProfileAndCheckoutSelectedItems(): 2026-05-15T21:53:09.052+03:00  WARN 14964 --- [demo] [o-auto-1-exec-4] org.hibernate.orm.query                  : HHH90003004: firstResult/maxResults specified with collection fetch; applying in memory
+END ru.msu.cmc.webprak.web.SeleniumWebIntegrationTest.customerCanSearchFilterOpenBookAddCartFromProfileAndCheckoutSelectedItems() -> SUCCESS (3075 ms)
+START ru.msu.cmc.webprak.web.SeleniumWebIntegrationTest.employeeLoginShowsDashboard()
+StdOut ru.msu.cmc.webprak.web.SeleniumWebIntegrationTest.employeeLoginShowsDashboard(): 2026-05-15T21:53:10.708+03:00  WARN 14964 --- [demo] [    Test worker] o.o.selenium.devtools.CdpVersionFinder   : Unable to find an exact match for CDP version 148, returning the closest version; found: 147; Please update to a Selenium version that supports CDP version 148
+END ru.msu.cmc.webprak.web.SeleniumWebIntegrationTest.employeeLoginShowsDashboard() -> SUCCESS (1572 ms)
+START ru.msu.cmc.webprak.web.SeleniumWebIntegrationTest.anonymousCustomerCanNavigateButAddingBookRequiresLogin()
+StdOut ru.msu.cmc.webprak.web.SeleniumWebIntegrationTest.anonymousCustomerCanNavigateButAddingBookRequiresLogin(): 2026-05-15T21:53:12.317+03:00  WARN 14964 --- [demo] [    Test worker] o.o.selenium.devtools.CdpVersionFinder   : Unable to find an exact match for CDP version 148, returning the closest version; found: 147; Please update to a Selenium version that supports CDP version 148
+StdOut ru.msu.cmc.webprak.web.SeleniumWebIntegrationTest.anonymousCustomerCanNavigateButAddingBookRequiresLogin(): 2026-05-15T21:53:12.818+03:00  WARN 14964 --- [demo] [o-auto-1-exec-6] org.hibernate.orm.query                  : HHH90003004: firstResult/maxResults specified with collection fetch; applying in memory
+END ru.msu.cmc.webprak.web.SeleniumWebIntegrationTest.anonymousCustomerCanNavigateButAddingBookRequiresLogin() -> SUCCESS (1769 ms)
+START ru.msu.cmc.webprak.web.SeleniumWebIntegrationTest.employeeCanAddEditAndDeleteBookFromAdminBooksPage()
+StdOut ru.msu.cmc.webprak.web.SeleniumWebIntegrationTest.employeeCanAddEditAndDeleteBookFromAdminBooksPage(): 2026-05-15T21:53:14.037+03:00  WARN 14964 --- [demo] [    Test worker] o.o.selenium.devtools.CdpVersionFinder   : Unable to find an exact match for CDP version 148, returning the closest version; found: 147; Please update to a Selenium version that supports CDP version 148
+StdOut ru.msu.cmc.webprak.web.SeleniumWebIntegrationTest.employeeCanAddEditAndDeleteBookFromAdminBooksPage(): 2026-05-15T21:53:15.206+03:00  WARN 14964 --- [demo] [o-auto-1-exec-1] org.hibernate.orm.query                  : HHH90003004: firstResult/maxResults specified with collection fetch; applying in memory
+StdOut ru.msu.cmc.webprak.web.SeleniumWebIntegrationTest.employeeCanAddEditAndDeleteBookFromAdminBooksPage(): 2026-05-15T21:53:16.088+03:00  WARN 14964 --- [demo] [o-auto-1-exec-9] org.hibernate.orm.query                  : HHH90003004: firstResult/maxResults specified with collection fetch; applying in memory
+StdOut ru.msu.cmc.webprak.web.SeleniumWebIntegrationTest.employeeCanAddEditAndDeleteBookFromAdminBooksPage(): 2026-05-15T21:53:16.721+03:00  WARN 14964 --- [demo] [o-auto-1-exec-4] org.hibernate.orm.query                  : HHH90003004: firstResult/maxResults specified with collection fetch; applying in memory
+StdOut ru.msu.cmc.webprak.web.SeleniumWebIntegrationTest.employeeCanAddEditAndDeleteBookFromAdminBooksPage(): 2026-05-15T21:53:16.828+03:00  WARN 14964 --- [demo] [o-auto-1-exec-6] org.hibernate.orm.query                  : HHH90003004: firstResult/maxResults specified with collection fetch; applying in memory
+StdOut ru.msu.cmc.webprak.web.SeleniumWebIntegrationTest.employeeCanAddEditAndDeleteBookFromAdminBooksPage(): 2026-05-15T21:53:18.915+03:00  WARN 14964 --- [demo] [    Test worker] org.hibernate.orm.query                  : HHH90003004: firstResult/maxResults specified with collection fetch; applying in memory
+END ru.msu.cmc.webprak.web.SeleniumWebIntegrationTest.employeeCanAddEditAndDeleteBookFromAdminBooksPage() -> SUCCESS (5424 ms)
+START ru.msu.cmc.webprak.web.SeleniumWebIntegrationTest.customerCanEditProfileOpenOrderDetailsAndRequestRefundForSelectedItems()
+StdOut ru.msu.cmc.webprak.web.SeleniumWebIntegrationTest.customerCanEditProfileOpenOrderDetailsAndRequestRefundForSelectedItems(): 2026-05-15T21:53:19.522+03:00  WARN 14964 --- [demo] [    Test worker] o.o.selenium.devtools.CdpVersionFinder   : Unable to find an exact match for CDP version 148, returning the closest version; found: 147; Please update to a Selenium version that supports CDP version 148
